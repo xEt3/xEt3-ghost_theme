@@ -17,9 +17,9 @@
         "test": "gscan ."
     },
     "author": {
-        "name": "Dmitry Lebedev",
-        "email": "mityalebedev@me.com",
-        "url": "https://github.com/mityalebedev"
+        "name": "Ignacio Belmonte",
+        "email": "xet3@outlook.es",
+        "url": "https://github.com/xEt3"
     },
     "gpm": {
         "type": "theme",
@@ -35,9 +35,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/mityalebedev/The-Shell.git"
+        "url": "https://github.com/xEt3"
     },
-    "bugs": "https://github.com/mityalebedev/The-Shell/issues",
+    "bugs": "https://github.com/xEt3",
     "contributors": "https://github.com/mityalebedev/The-Shell/graphs/contributors",
     "devDependencies": {
         "browser-sync": "^2.26.3",
