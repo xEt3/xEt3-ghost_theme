@@ -10,7 +10,10 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
+span {
+font-size:30px;
+cursor:pointer;
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -43,6 +46,7 @@ body {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  margin-top: 50px;
 }
 
 @media screen and (max-height: 450px) {
@@ -54,7 +58,7 @@ body {
 
 <header id="site-head" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
 
-<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+<span  onclick="openNav()">&#9776;</span>
     <div class="vertical animated bounceInDown" style="align-content: center">
         <div id="site-head-content" class="inner">
             {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
