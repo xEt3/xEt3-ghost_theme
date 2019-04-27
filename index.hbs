@@ -21,7 +21,7 @@ cursor:pointer;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #f1f1f1;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -50,7 +50,7 @@ cursor:pointer;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 50px;}
   .sidenav a {font-size: 18px;}
 }
 </style>
@@ -58,21 +58,24 @@ cursor:pointer;
 
 <header id="site-head" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
 
-<span  onclick="openNav()">&#9776;</span>
+<br>
+    <span  onclick="openNav()">&#9776;</span>
     <div class="vertical animated bounceInDown" style="align-content: center">
         <div id="site-head-content" class="inner">
             {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
             <h1 class="blog-title">{{@blog.title}}</h1>
             <h2 class="blog-description">{{@blog.description}}</h2>
-            {{> "site-nav"}}
         </div>
     </div>
 </header>
 <body>
     <div id="mySidenav" class="sidenav">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <br><br>
         {{#if @blog.navigation}}
-            {{navigation}}
+        <a href="https://github.com/xEt3" target="_blank" class="github4"><img src="assets/github4.ico" alt="" width="25px"><b> Github</b></a>
+        <a href="https://twitter.com/xEt31" target="_blank" class="github4"><img src="assets/twitter.ico" alt="" width="25px"><b> Twitter</b></a>
+        <a href="https://www.twitch.tv/xeet3" target="_blank" class="github4"><img src="assets/twitch.png" alt="" width="25px"><b> Twitch</b></a>
         {{/if}}
 </div>
 
