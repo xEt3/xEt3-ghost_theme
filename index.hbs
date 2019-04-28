@@ -21,7 +21,7 @@ cursor:pointer;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #f1f1f1;
+  background-color: #647591;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -31,7 +31,7 @@ cursor:pointer;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #0c0c0c;
   display: block;
   transition: 0.3s;
 }
@@ -50,15 +50,13 @@ cursor:pointer;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 50px;}
+  .sidenav {padding-top: 10px;}
   .sidenav a {font-size: 18px;}
 }
 </style>
 </head>
 
 <header id="site-head" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
-
-<br>
     <span  onclick="openNav()">&#9776;</span>
     <div class="vertical animated bounceInDown" style="align-content: center">
         <div id="site-head-content" class="inner">
