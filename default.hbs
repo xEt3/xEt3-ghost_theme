@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-
+    <link rel="stylesheet" type="text/css" href="{{asset "css/nav_left.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -27,10 +27,10 @@
     {{{body}}}
 
     <footer class="site-footer">
-        <!-- <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a> -->
+        <!-- <a class="subscribe icon-feed" href="{{@site.url}}/rss/"><span class="tooltip">Subscribe!</span></a> -->
         <div class="inner">
-             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org"><span class="icon-ghost-text">Ghost</span></a> in <a href="https://github.com/mityalebedev/The-Shell">The Shell</a> theme.</section>
+             <section class="copyright">All content copyright <a href="/">{{@site.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+             <a href="mailto:xet3@outlook.es" style="align-content: center">xet3@outlook.es</a>
         </div>
     </footer>
 

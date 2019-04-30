@@ -4,108 +4,100 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-span {
-font-size:30px;
-cursor:pointer;
-}
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #647591;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #0c0c0c;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 10px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-<header id="site-head" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
-    <span  onclick="openNav()">&#9776;</span>
-    <div class="vertical animated bounceInDown" style="align-content: center">
-        <div id="site-head-content" class="inner">
-            {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
-        </div>
+<header id="site-head" {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})" {{/if}}>
+  <div class="vertical animated bounceInDown">
+    <div id="site-head-content" class="inner">
+      {{#if @site.logo}}<a id="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo" /></a>{{/if}}
+      <h1 class="blog-title">{{@site.title}}</h1>
+      <h2 class="blog-description">{{@site.description}}</h2>
+      <div>
+        <a href="https://github.com/xEt3" target="_blank" class="github4"><img src="assets/github4.ico" alt=""
+            width="50px"><b></b></a>
+        <a href="https://twitter.com/xEt31" target="_blank" class="github4"><img src="assets/twitter.ico" alt=""
+            width="50px"><b></b></a>
+        <a href="https://www.twitch.tv/xeet3" target="_blank" class="github4"><img src="assets/twitch.png" alt=""
+            width="50px"></a>
+      </div>
     </div>
+  </div>
 </header>
+
 <body>
-    <div id="mySidenav" class="sidenav">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-         <br><br>
-        {{#if @blog.navigation}}
-        <a href="https://github.com/xEt3" target="_blank" class="github4"><img src="assets/github4.ico" alt="" width="25px"><b> Github</b></a>
-        <a href="https://twitter.com/xEt31" target="_blank" class="github4"><img src="assets/twitter.ico" alt="" width="25px"><b> Twitter</b></a>
-        <a href="https://www.twitch.tv/xeet3" target="_blank" class="github4"><img src="assets/twitch.png" alt="" width="25px"><b> Twitch</b></a>
-        {{/if}}
-</div>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <br><br>
+    {{#if @site.navigation}}
+    <a href="https://github.com/xEt3" target="_blank" class="github4"><img src="assets/github4.ico" alt=""
+        width="25px"><b> Github</b></a>
+    <a href="https://twitter.com/xEt31" target="_blank" class="github4"><img src="assets/twitter.ico" alt=""
+        width="25px"><b> Twitter</b></a>
+    <a href="https://www.twitch.tv/xeet3" target="_blank" class="github4"><img src="assets/twitch.png" alt=""
+        width="25px"><b> Twitch</b></a>
+    {{/if}}
+  </div>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 </body>
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
 
-    {{! Each post will be output using this markup }}
-    {{#foreach posts}}
 
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-        </section>
-    </article>
+  <article class="post page">
 
-    {{/foreach}}
 
-    {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
+
+    <section class="post-content">
+
+
+      <p><img src="https://media.giphy.com/media/gF1eNvrZDHqbS/giphy.gif" alt="Mr_Robot_GIF"></p>
+    </section>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = d_id;
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+    <!-- <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>-->
+
+
+    <footer class="post-footer">
+
+      <section class="author">
+        <h4>Ignacio Belmonte</h4>
+        <p>Researcher/ Developer</p>
+      </section>
+
+      <section class="share" style="width: 150px;align-content: center">
+        <h4>Contact</h4>
+        <a href="mailto:xet3@outlook.es"><img src="assets/mail.svg" style="width: 20px"></a>
+        <a href="https://twitter.com/xEt31" target="_blank" class="github4"><img src="assets/twitter.ico" alt=""
+        width="20px"><b></b></a>
+      </section>
+
+    </footer>
+
+
+  </article>
 </main>
